@@ -1,0 +1,238 @@
+<!-- My Websites Source Code. Don't copy you skid! btw Oliver if you're looking through the source code, type "ILooked555" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Games - ✨Limits Amazing Website!✨</title>
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #121212;
+            color: #eaeaea;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-brand, .nav-link {
+            color: #eaeaea !important;
+        }
+        .game-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: upMorph 0.6s ease-out forwards;
+        }
+        .game-card:nth-child(1) { animation-delay: 0.2s; }
+        .game-card:nth-child(2) { animation-delay: 0.4s; }
+        .game-card:nth-child(3) { animation-delay: 0.6s; }
+        .game-card:nth-child(4) { animation-delay: 0.8s; }
+        .game-card:nth-child(5) { animation-delay: 1s; }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes upMorph {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .game-card h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffa500;
+        }
+        .game-card p {
+            color: #b0b0b0;
+        }
+        .game-card .btn {
+            background-color: #ffa500;
+            border-color: #ffa500;
+            color: #121212;
+            font-weight: 500;
+        }
+        .game-card .btn:hover {
+            background-color: #e69500;
+            border-color: #e69500;
+        }
+
+        /* Alert box styles */
+        .alert-box {
+            background-color: rgba(255, 193, 7, 0.9); /* Yellow with transparency */
+            color: #3e3e3e;
+            border: 1px solid #ffca28;
+            border-radius: 5px;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeIn 1s forwards 0.5s;
+        }
+        .alert-box .icon {
+            margin-right: 10px;
+        }
+        .alert-box .alert-text {
+            flex-grow: 1;
+        }
+        .alert-box .close-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #3e3e3e;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .alert-box .close-btn:hover {
+            color: #d32f2f;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">✨Limits Amazing Website!✨</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Games.html">Online Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Scripts.html">Scripts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Box -->
+    <div class="alert-box" id="alertBox">
+        <div class="icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="alert-text">
+            <strong>Alert:</strong> This website is in development!
+        </div>
+        <button class="close-btn" onclick="closeAlert()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Online Games Section -->
+    <div class="container mt-5">
+        <h2 class="text-center text-ffa500 mb-5">Play Online Games!</h2>
+        <div class="row">
+            <!-- Game 1 Card -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <h5>EaglerCraft</h5>
+                    <p>Play Minecraft in your browser with no installation required!</p>
+                    <a href="https://eaglercraft.com/" target="_blank" class="btn btn-custom btn-lg">Play Now</a>
+                </div>
+            </div>
+
+            <!-- Game 2 Card -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <h5>Tyrone's Unblocked Games</h5>
+                    <p>Play various unblocked games from this awesome website.</p>
+                    <a href="https://sites.google.com/site/tyronesgamesez/" target="_blank" class="btn btn-custom btn-lg">Play Now</a>
+                </div>
+            </div>
+
+            <!-- Game 3 Card -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <h5>White Screen Games</h5>
+                    <p>Enjoy a variety of games with minimal loading screens. Good To prank your friends with fake updating screens!</p>
+                    <a href="https://whitescreen.online" target="_blank" class="btn btn-custom btn-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Game 4 Card -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <h5>Emupedia Emulator OS</h5>
+                    <p>Experience various classic games with the EmuOS emulator.</p>
+                    <a href="https://emupedia.net/beta/emuos" target="_blank" class="btn btn-custom btn-lg">Play Now</a>
+                </div>
+            </div>
+
+            <!-- Game 5 Card -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <h5>Documentary Games</h5>
+                    <p>Check out games related to documentaries and more!</p>
+                    <a href="https://watchdocumentaries.com/games/" target="_blank" class="btn btn-custom btn-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <p>&copy; 2024 ✨Limits Amazing Website!✨. All Rights Reserved. (NotAnRealCompany)</p>
+    </footer>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Alert Box Script -->
+    <script>
+        function closeAlert() {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.style.opacity = '0';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 300); // Delay to allow opacity transition
+        }
+    </script>
+
+</body>
+</html>

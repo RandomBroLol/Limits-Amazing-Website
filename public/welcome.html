@@ -1,0 +1,231 @@
+<!-- My Website's Source Code. Don't copy you skid! btw Oliver if you're looking through the source code, type "ILooked555" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨Limits Amazing Website!✨</title>
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #121212;
+            color: #eaeaea;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-brand, .nav-link {
+            color: #eaeaea !important;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: upMorph 1s forwards;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #ffa500, #e69500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-title .normal-text {
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: #eaeaea;
+        }
+        .hero-text {
+            font-size: 1.25rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+        .btn-custom {
+            background-color: #ffa500;
+            border-color: #ffa500;
+            color: #121212;
+            font-weight: 500;
+        }
+        .btn-custom:hover {
+            background-color: #e69500;
+            border-color: #e69500;
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .features-section {
+            margin-top: 3rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffa500;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #b0b0b0;
+            border-top: 1px solid #333333;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Alert box styles */
+        .alert-box {
+            background-color: rgba(255, 193, 7, 0.9); /* Yellow with transparency */
+            color: #3e3e3e;
+            border: 1px solid #ffca28;
+            border-radius: 5px;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: upMorph 1s forwards 0.5s; /* Delay for alert box */
+        }
+
+        .alert-box .icon {
+            margin-right: 10px;
+        }
+
+        .alert-box .alert-text {
+            flex-grow: 1;
+        }
+
+        .alert-box .close-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #3e3e3e;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .alert-box .close-btn:hover {
+            color: #d32f2f;
+        }
+
+        /* Keyframes for up morph animation */
+        @keyframes upMorph {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">✨Limits Amazing Website!✨</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Games.html">Online Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Scripts.html">Scripts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mt-5">
+        <div class="hero-section">
+            <h1 class="hero-title">
+                Welcome to <span class="normal-text">✨Limits Amazing Website!✨</span>
+            </h1>
+            <p class="hero-text">Discover New Roblox Scripts and Play Online Unblocked Games for School!</p>
+            <a href="home.html" class="btn btn-custom btn-lg">Start Discovering!</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container features-section">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fas fa-lightbulb feature-icon"></i>
+                <h5>Innovative Design</h5>
+                <p>Our Bootstrap UI is tailored for a seamless and visually appealing experience.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-gamepad feature-icon"></i>
+                <h5>Online Games</h5>
+                <p>Enjoy exciting online games directly from your browser with no installation required. Best for school computers!</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-code feature-icon"></i>
+                <h5>Roblox Scripts</h5>
+                <p>Get access to some Roblox Scripts!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Box -->
+    <div class="alert-box" id="alertBox">
+        <div class="icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="alert-text">
+            <strong>Alert:</strong> This website is in development!
+        </div>
+        <button class="close-btn" onclick="closeAlert()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <p>&copy; 2024 ✨Limits Amazing Website!✨. All Rights Reserved. (NotAnRealCompany)</p>
+    </footer>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Alert Box Script -->
+    <script>
+        function closeAlert() {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.style.opacity = '0';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 300); // Delay to allow opacity transition
+        }
+    </script>
+
+</body>
+</html>
